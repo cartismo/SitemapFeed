@@ -1,0 +1,30 @@
+{
+    "name": "SitemapFeed",
+    "alias": "sitemapfeed",
+    "description": "Generate XML sitemaps for products, categories, and pages with automatic search engine submission.",
+    "keywords": ["sitemap", "xml", "seo", "feed", "google"],
+    "priority": 0,
+    "providers": [
+        "Modules\\SitemapFeed\\Providers\\ServiceProvider",
+        "Modules\\SitemapFeed\\Providers\\RouteServiceProvider"
+    ],
+    "files": [],
+    "scripts": {
+        "post-install": [
+            "composer require spatie/laravel-sitemap --no-interaction",
+            "php artisan package:discover --ansi",
+            "php artisan config:clear",
+            "php artisan route:clear",
+            "php artisan view:clear",
+            "php artisan cache:clear"
+        ],
+        "post-uninstall": [
+            "composer remove spatie/laravel-sitemap --no-interaction",
+            "php artisan package:discover --ansi",
+            "php artisan config:clear",
+            "php artisan route:clear",
+            "php artisan view:clear",
+            "php artisan cache:clear"
+        ]
+    }
+}

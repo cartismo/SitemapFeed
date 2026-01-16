@@ -1,0 +1,24 @@
+{
+    "name": "cartismo/sitemap-feed",
+    "description": "Sitemap generator module for Cartismo",
+    "type": "cartismo-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cartismo",
+            "email": "support@cartismo.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\SitemapFeed\\Providers\\ServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\SitemapFeed\\": ""
+        }
+    }
+}
